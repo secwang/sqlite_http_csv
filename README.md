@@ -7,7 +7,7 @@ Provide the following functions.
 2. provid baisc http support
 3. support dynamic csv name and query
 
-behavior like this. It's very useful to import data into excel or sqlite.
+behavior like this. It's very useful to import data into excel or google sheets.
 
 localhost:5000/a.csv?select * from t where sym = "a"
 
