@@ -27,11 +27,11 @@ proc wapp-default {} {
   # puts $wapp
   set name [wapp-param PATH_INFO]
   set hdr [wapp-param .header] 
-  set hdrr [join $hdr " "]
+  set shdr [split $hdr "\n"]
+  set reqq [lindex $shdr 0]
   # set req [lindex $hdr 1]
-  regexp {\?(.*)HTTP} $hdrr a b 
+  regexp {\?(.*)HTTP} $reqq a b 
   # puts $b
-  # puts $hdrr
   # puts $query
 
   set base_query [regsub -all "%20" $b " "]
