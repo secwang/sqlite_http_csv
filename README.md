@@ -13,7 +13,7 @@ localhost:5000/a.csv?select * from t where sym = "a"
 
 # tech detail
 
-will use tcl wapp and sqlite as basic framework.
+will use tcl wapp and sqlite as basic framework.  
 because it's lightweight and suited for sqlite
 
 
@@ -21,6 +21,9 @@ because it's lightweight and suited for sqlite
 use activetcl install tcl. 
 
 tclsh main.tcl -DDBFILE=test.db --server 8000
-
+```
 curl 'http://localhost:8000/a.csv?select * from t'
+```
+```
 curl -vvvv 'http://localhost:8000/a.csv?select%20*%20from%20t%20limit%201'
+```
