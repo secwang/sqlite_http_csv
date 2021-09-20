@@ -13,8 +13,10 @@ localhost:5000/a.csv?select * from t where sym = "a"
 
 # tech detail
 
-will use tcl wapp and sqlite as basic framework.  
-because it's lightweight and suited for sqlite
+ use tcl wapp framework.  
+because it's lightweight and suited for sqlite.
+
+https://wapp.tcl.tk/home/doc/trunk/README.md
 
 
 # usage 
