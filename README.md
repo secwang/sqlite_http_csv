@@ -20,9 +20,8 @@ because it's lightweight and suited for sqlite
 # usage 
 use activetcl install tcl. 
 
-tclsh main.tcl -DDBFILE=test.db --server 8000
 ```
-curl 'http://localhost:8000/a.csv?select * from t'
+tclsh main.tcl -DDBFILE=test.db --server 8000
 ```
 ```
 curl -vvvv 'http://localhost:8000/a.csv?select%20*%20from%20t%20limit%201'
