@@ -26,9 +26,15 @@ proc wapp-default {} {
   global wapp
   # puts $wapp
   set name [wapp-param PATH_INFO]
-  set query [wapp-param QUERY_STRING]
+  set hdr [wapp-param .header] 
+  set hdrr [join $hdr " "]
+  # set req [lindex $hdr 1]
+  regexp {\?(.*)HTTP} $hdrr a b 
+  # puts $b
+  # puts $hdrr
+  # puts $query
 
-  set base_query [regsub -all "%20" $query " "]
+  set base_query [regsub -all "%20" $b " "]
   set trim_name [regsub "/" $name ""]
 
   set dbf $::DBFILE 
